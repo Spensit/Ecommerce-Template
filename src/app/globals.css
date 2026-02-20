@@ -1,0 +1,76 @@
+/**
+ * globals.css
+ *
+ * Global stylesheet. Imports Tailwind CSS v4 and defines CSS custom properties
+ * (design tokens) under :root. To retheme the entire site, edit the custom
+ * property values below. All components reference these tokens via var().
+ */
+
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------
+ * Design Tokens
+ *
+ * Edit these values to retheme the entire site. Components use these tokens
+ * through Tailwind arbitrary value syntax, e.g. bg-[var(--color-primary)].
+ * ---------------------------------------------------------------------- */
+
+:root {
+  /* Primary brand colour - used for buttons, links, and accents */
+  --color-primary: #111827;
+  --color-primary-hover: #1f2937;
+
+  /* Accent colour - used for sale badges and promotional highlights */
+  --color-accent: #ef4444;
+  --color-accent-hover: #dc2626;
+
+  /* Surface colours */
+  --color-background: #ffffff;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+
+  /* Text colours */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+
+  /* Border colours */
+  --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
+
+  /* Sale price highlight */
+  --color-sale: #ef4444;
+
+  /* Max content width */
+  --max-width: 80rem;
+
+  /* Spacing scale - extend or override if needed */
+  --spacing-section: 4rem;
+}
+
+/* -------------------------------------------------------------------------
+ * Base resets and body styles
+ * ---------------------------------------------------------------------- */
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default focus outlines and let Tailwind's focus-visible handle it */
+*:focus {
+  outline: none;
+}
+
+/* next/image fills its container, but we want consistent aspect ratios */
+img {
+  max-width: 100%;
+  height: auto;
+}
